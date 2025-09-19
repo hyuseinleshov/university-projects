@@ -1,0 +1,194 @@
+/* This file contains custom styles for design enhancement */
+
+/* Basic CSS variables for easy maintenance */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --info-color: #17a2b8;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+
+  --shadow-light: 0 2px 4px rgba(0,0,0,0.1);
+  --shadow-medium: 0 4px 8px rgba(0,0,0,0.15);
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+}
+
+/* Global improvements */
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Improved navigation */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--primary-color) !important;
+  transform: translateY(-2px);
+}
+
+/* Hero section styles */
+.hero-section {
+  background: linear-gradient(135deg, var(--primary-color), var(--info-color));
+  color: white;
+}
+
+/* Improved cards */
+.card {
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+/* Improved buttons */
+.btn {
+  border-radius: 25px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* List improvements */
+.list-group-item {
+  border: none;
+  border-radius: var(--border-radius) !important;
+  margin-bottom: 0.5rem;
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+}
+
+.list-group-item:hover {
+  transform: translateX(10px);
+  background-color: var(--light-color);
+}
+
+/* Technology cards */
+.tech-card {
+  transition: var(--transition);
+}
+
+.tech-card:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* Timeline styles */
+.timeline .alert {
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+  transition: var(--transition);
+}
+
+.timeline .alert:hover {
+  transform: translateX(10px);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Scroll animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Modal windows */
+.modal-content {
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-medium);
+}
+
+.modal-header {
+  background: var(--primary-color);
+  color: white;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+  }
+
+  .list-group-item:hover {
+    transform: translateX(5px);
+  }
+}
+
+/* Main content should grow to push footer down */
+main {
+  flex: 1;
+}
+
+/* Footer styles */
+footer {
+  background: var(--dark-color) !important;
+  margin-top: auto;
+}
+
+/* Accessibility - focus states */
+.btn:focus,
+.nav-link:focus,
+.card:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .navbar,
+  .btn,
+  footer {
+    display: none !important;
+  }
+
+  .card {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+  }
+}

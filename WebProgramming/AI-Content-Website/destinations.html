@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дестинации - AI Travel Guide</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="bg-dark text-white">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html">AI Travel Guide</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Начало</a></li>
+            <li class="nav-item"><a class="nav-link active" href="destinations.html">Дестинации</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Галерия</a></li>
+            <li class="nav-item"><a class="nav-link" href="tips.html">Съвети</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">За проекта</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section text-center p-5">
+    <div class="container">
+      <h1 class="display-4">Дестинации</h1>
+      <p class="lead">Изследвайте най-красивите места по света</p>
+      <div class="mt-4">
+        <span class="badge bg-light text-dark me-2">🌍 6 дестинации</span>
+        <span class="badge bg-light text-dark me-2">📸 HD снимки</span>
+        <span class="badge bg-light text-dark">🎬 Видео турове</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <main class="container my-5">
+    <section>
+      <!-- Filter Section -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="d-flex justify-content-between align-items-center flex-wrap">
+            <h2 class="mb-3">Популярни дестинации</h2>
+            <div class="btn-group mb-3" role="group">
+              <input type="radio" class="btn-check" name="filter" id="all" autocomplete="off" checked>
+              <label class="btn btn-outline-primary" for="all">Всички</label>
+
+              <input type="radio" class="btn-check" name="filter" id="europe" autocomplete="off">
+              <label class="btn btn-outline-primary" for="europe">Европа</label>
+
+              <input type="radio" class="btn-check" name="filter" id="america" autocomplete="off">
+              <label class="btn btn-outline-primary" for="america">Америка</label>
+
+              <input type="radio" class="btn-check" name="filter" id="asia" autocomplete="off">
+              <label class="btn btn-outline-primary" for="asia">Азия</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="destinationsGrid">
+        <article class="col-lg-4 col-md-6 mb-4 animate-on-scroll destination-card" data-continent="europe">
+          <div class="card h-100">
+            <div class="position-relative">
+              <img src="media/images/paris2.jpg" class="card-img-top" alt="Париж">
+              <span class="position-absolute top-0 end-0 m-2 badge bg-warning">🇫🇷 Европа</span>
+              <div class="position-absolute bottom-0 start-0 m-2">
+                <span class="badge bg-dark bg-opacity-75">⭐ 4.8/5</span>
+              </div>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title d-flex justify-content-between align-items-center">
+                Париж
+                <small class="text-muted">🏛️ Култура</small>
+              </h5>
+              <p class="card-text flex-grow-1">Градът на любовта и светлините, известен с Айфеловата кула, Лувъра и романтичните си булеварди. Всяка улица разказва история от векове изкуство и култура.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <small class="text-muted">💰 от €80/ден</small>
+                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#parisModal">
+                  <i class="bi bi-play-circle"></i> Виж видео
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="col-lg-4 col-md-6 mb-4 animate-on-scroll destination-card" data-continent="europe">
+          <div class="card h-100">
+            <div class="position-relative">
+              <img src="media/images/rome2.jpg" class="card-img-top" alt="Рим">
+              <span class="position-absolute top-0 end-0 m-2 badge bg-success">🇮🇹 Европа</span>
+              <div class="position-absolute bottom-0 start-0 m-2">
+                <span class="badge bg-dark bg-opacity-75">⭐ 4.9/5</span>
+              </div>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title d-flex justify-content-between align-items-center">
+                Рим
+                <small class="text-muted">🏛️ История</small>
+              </h5>
+              <p class="card-text flex-grow-1">Вечният град, където древната история се среща с модерния живот. Колизеумът, Пантеонът и Ватикана очакват да бъдат изследвани.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <small class="text-muted">💰 от €65/ден</small>
+                <a href="gallery.html" class="btn btn-primary btn-sm">
+                  <i class="bi bi-images"></i> Галерия
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="col-lg-4 col-md-6 mb-4 animate-on-scroll destination-card" data-continent="asia">
+          <div class="card h-100">
+            <div class="position-relative">
+              <img src="media/images/tokyo2.jpg" class="card-img-top" alt="Токио">
+              <span class="position-absolute top-0 end-0 m-2 badge bg-danger">🇯🇵 Азия</span>
+              <div class="position-absolute bottom-0 start-0 m-2">
+                <span class="badge bg-dark bg-opacity-75">⭐ 4.7/5</span>
+              </div>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title d-flex justify-content-between align-items-center">
+                Токио
+                <small class="text-muted">🏙️ Модерен</small>
+              </h5>
+              <p class="card-text flex-grow-1">Пулсиращ мегаполис, където традиционната японска култура се сплетява с най-новите технологии. От сушибарове до небостъргачи.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <small class="text-muted">💰 от ¥8000/ден</small>
+                <a href="gallery.html" class="btn btn-primary btn-sm">
+                  <i class="bi bi-camera"></i> Снимки
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="col-lg-4 col-md-6 mb-4 animate-on-scroll destination-card" data-continent="america">
+          <div class="card h-100">
+            <div class="position-relative">
+              <img src="media/images/new-york1.jpg" class="card-img-top" alt="Ню Йорк">
+              <span class="position-absolute top-0 end-0 m-2 badge bg-primary">🇺🇸 Америка</span>
+              <div class="position-absolute bottom-0 start-0 m-2">
+                <span class="badge bg-dark bg-opacity-75">⭐ 4.6/5</span>
+              </div>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title d-flex justify-content-between align-items-center">
+                Ню Йорк
+                <small class="text-muted">🌃 Мегаполис</small>
+              </h5>
+              <p class="card-text flex-grow-1">Градът, който никога не спи. Бродуей, Централния парк, Статуята на свободата и безкрайните възможности за приключения.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <small class="text-muted">💰 от $120/ден</small>
+                <a href="gallery.html" class="btn btn-primary btn-sm">
+                  <i class="bi bi-building"></i> Изследвай
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="col-lg-4 col-md-6 mb-4 animate-on-scroll destination-card" data-continent="europe">
+          <div class="card h-100">
+            <div class="position-relative">
+              <img src="media/images/london1.jpg" class="card-img-top" alt="Лондон">
+              <span class="position-absolute top-0 end-0 m-2 badge bg-info">🇬🇧 Европа</span>
+              <div class="position-absolute bottom-0 start-0 m-2">
+                <span class="badge bg-dark bg-opacity-75">⭐ 4.5/5</span>
+              </div>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title d-flex justify-content-between align-items-center">
+                Лондон
+                <small class="text-muted">👑 Кралски</small>
+              </h5>
+              <p class="card-text flex-grow-1">Столицата на Великобритания, където историята оживява в музеите, двореците и градските паркове. Бъкингамският дворец и Биг Бен са само началото.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <small class="text-muted">💰 от £90/ден</small>
+                <a href="gallery.html" class="btn btn-primary btn-sm">
+                  <i class="bi bi-clock-history"></i> История
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="col-lg-4 col-md-6 mb-4 animate-on-scroll destination-card" data-continent="europe">
+          <div class="card h-100">
+            <div class="position-relative">
+              <img src="media/images/barcelona1.png" class="card-img-top" alt="Барселона">
+              <span class="position-absolute top-0 end-0 m-2 badge bg-warning">🇪🇸 Европа</span>
+              <div class="position-absolute bottom-0 start-0 m-2">
+                <span class="badge bg-dark bg-opacity-75">⭐ 4.8/5</span>
+              </div>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title d-flex justify-content-between align-items-center">
+                Барселона
+                <small class="text-muted">🎨 Изкуство</small>
+              </h5>
+              <p class="card-text flex-grow-1">Каталунски перла с уникална архитектура от Гауди, красиви плажове и богата кулинарна традиция. Саграда Фамилия е истинско чудо.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <small class="text-muted">💰 от €70/ден</small>
+                <a href="gallery.html" class="btn btn-primary btn-sm">
+                  <i class="bi bi-palette"></i> Архитектура
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal for Paris -->
+  <div class="modal fade" id="parisModal" tabindex="-1" aria-labelledby="parisModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="parisModalLabel">Париж - Видео тур</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/REDVbTQxMXo" title="Paris Video Tour" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center p-4">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 AI Travel Guide - Всички права запазени</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Filter functionality
+    const filterButtons = document.querySelectorAll('input[name="filter"]');
+    const destinationCards = document.querySelectorAll('.destination-card');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('change', () => {
+        const filter = button.id;
+
+        destinationCards.forEach(card => {
+          if (filter === 'all' || card.dataset.continent === filter) {
+            card.style.display = 'block';
+            card.classList.add('animate-on-scroll');
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Add loading animation to buttons
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        if (!this.disabled) {
+          const originalText = this.innerHTML;
+          this.innerHTML = '<span class="loading-spinner"></span> Зареждане...';
+          this.disabled = true;
+
+          setTimeout(() => {
+            this.innerHTML = originalText;
+            this.disabled = false;
+          }, 1500);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
